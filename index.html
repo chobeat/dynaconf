@@ -1,34 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <title>Dynaconf by rochacbruno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <title>Dynaconf by rochacbruno</title>
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>Dynaconf</h1>
-        <h2>Dynamic config load for Python </h2>
-        <a href="https://github.com/rochacbruno/dynaconf" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+    <section class="page-header">
+      <h1 class="project-name">Dynaconf</h1>
+      <h2 class="project-tagline">Dynamic config load for Python </h2>
+      <a href="https://github.com/rochacbruno/dynaconf" class="btn">View on GitHub</a>
+      <a href="https://github.com/rochacbruno/dynaconf/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/rochacbruno/dynaconf/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <p><img src="https://raw.githubusercontent.com/rochacbruno/dynaconf/master/dynaconf_joystick.png" align="left" width="192px" height="192px">
+    <section class="main-content">
+      <p><img src="https://raw.githubusercontent.com/rochacbruno/dynaconf/master/dynaconf_joystick.png" align="left" width="192px" height="192px">
 <img align="left" width="0" height="192px" hspace="10"></p>
 
 <blockquote>
@@ -42,12 +33,17 @@
 <p><br><br></p>
 
 <h1>
-<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h1>
+<a id="live-demo" class="anchor" href="#live-demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>live demo</h1>
+
+<p>You can play with the live demo here: <a href="https://repl.it/EGcO/0">https://repl.it/EGcO/0</a></p>
+
+<h1>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h1>
 
 <div class="highlight highlight-source-shell"><pre>pip install dynaconf</pre></div>
 
 <h1>
-<a id="define-your-settings-module" class="anchor" href="#define-your-settings-module" aria-hidden="true"><span class="octicon octicon-link"></span></a>define your settings module</h1>
+<a id="define-your-settings-module" class="anchor" href="#define-your-settings-module" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>define your settings module</h1>
 
 <div class="highlight highlight-source-shell"><pre><span class="pl-k">export</span> DYNACONF_SETTINGS=myproject.settings
 or
@@ -56,7 +52,7 @@ or
 <span class="pl-k">export</span> DYNACONF_SETTINGS=/etc/myprogram/settings.py</pre></div>
 
 <h1>
-<a id="you-can-export-extra-values" class="anchor" href="#you-can-export-extra-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>you can export extra values</h1>
+<a id="you-can-export-extra-values" class="anchor" href="#you-can-export-extra-values" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>you can export extra values</h1>
 
 <div class="highlight highlight-source-shell"><pre><span class="pl-k">export</span> DYNACONF_DATABASE=<span class="pl-s"><span class="pl-pds">'</span>mysql://....<span class="pl-pds">'</span></span>
 <span class="pl-k">export</span> DYNACONF_SYSTEM_USER=<span class="pl-s"><span class="pl-pds">'</span>admin<span class="pl-pds">'</span></span>
@@ -65,28 +61,28 @@ or
 <p>Or define all your settings as env_vars starting with <strong>DYNACONF_</strong></p>
 
 <h1>
-<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h1>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h1>
 
 <div class="highlight highlight-source-shell"><pre><span class="pl-k">export</span> DYNACONF_SETTINGS=myproject.settings</pre></div>
 
 <h3>
-<a id="file-myprojectsettingspy" class="anchor" href="#file-myprojectsettingspy" aria-hidden="true"><span class="octicon octicon-link"></span></a>file: myproject/settings.py</h3>
+<a id="file-myprojectsettingspy" class="anchor" href="#file-myprojectsettingspy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>file: myproject/settings.py</h3>
 
-<div class="highlight highlight-source-python"><pre>NAME <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>Bruno<span class="pl-pds">'</span></span></pre></div>
+<div class="highlight highlight-source-python"><pre><span class="pl-c1">NAME</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>Bruno<span class="pl-pds">'</span></span></pre></div>
 
 <h3>
-<a id="fileapppy" class="anchor" href="#fileapppy" aria-hidden="true"><span class="octicon octicon-link"></span></a>file:app.py</h3>
+<a id="fileapppy" class="anchor" href="#fileapppy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>file:app.py</h3>
 
 <div class="highlight highlight-source-python"><pre>
 <span class="pl-k">from</span> dynaconf <span class="pl-k">import</span> settings
 
-<span class="pl-k">print</span> settings.NAME
-<span class="pl-k">print</span> settings.DATABASE
-<span class="pl-k">print</span> settings.SYSTEM_USER
-<span class="pl-k">print</span> settings.get(<span class="pl-s"><span class="pl-pds">'</span>FOO<span class="pl-pds">'</span></span>)</pre></div>
+<span class="pl-c1">print</span> settings.<span class="pl-c1">NAME</span>
+<span class="pl-c1">print</span> settings.<span class="pl-c1">DATABASE</span>
+<span class="pl-c1">print</span> settings.<span class="pl-c1">SYSTEM_USER</span>
+<span class="pl-c1">print</span> settings.get(<span class="pl-s"><span class="pl-pds">'</span>FOO<span class="pl-pds">'</span></span>)</pre></div>
 
 <h3>
-<a id="then" class="anchor" href="#then" aria-hidden="true"><span class="octicon octicon-link"></span></a>then</h3>
+<a id="then" class="anchor" href="#then" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>then</h3>
 
 <div class="highlight highlight-source-shell"><pre>python app.py
 
@@ -96,7 +92,7 @@ admin
 bar</pre></div>
 
 <h1>
-<a id="namespace-support" class="anchor" href="#namespace-support" aria-hidden="true"><span class="octicon octicon-link"></span></a>Namespace support</h1>
+<a id="namespace-support" class="anchor" href="#namespace-support" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Namespace support</h1>
 
 <p>When you are working with multiple projects using the same environment maybe you want to use different namespaces for ENV vars based configs</p>
 
@@ -113,37 +109,37 @@ bar</pre></div>
 settings.configure()
 
 <span class="pl-c"># access default namespace settings</span>
-settings.DATABASE
+settings.<span class="pl-c1">DATABASE</span>
 <span class="pl-s"><span class="pl-pds">'</span>DYNADB<span class="pl-pds">'</span></span>
 
 <span class="pl-c"># switch namespaces</span>
 settings.namespace(<span class="pl-s"><span class="pl-pds">'</span>PROJ1<span class="pl-pds">'</span></span>)
-settings.DATABASE
+settings.<span class="pl-c1">DATABASE</span>
 <span class="pl-s"><span class="pl-pds">'</span>PROJ1DB<span class="pl-pds">'</span></span>
 
 settings.namespace(<span class="pl-s"><span class="pl-pds">'</span>PROJ2<span class="pl-pds">'</span></span>)
-settings.DATABASE
+settings.<span class="pl-c1">DATABASE</span>
 <span class="pl-s"><span class="pl-pds">'</span>PROJ2DB<span class="pl-pds">'</span></span>
 
 <span class="pl-c"># return to default, call it without args</span>
 settings.namespace()
-settings.DATABASE
+settings.<span class="pl-c1">DATABASE</span>
 <span class="pl-s"><span class="pl-pds">'</span>DYNADB<span class="pl-pds">'</span></span></pre></div>
 
 <p>You can also use the context manager:</p>
 
-<div class="highlight highlight-source-python"><pre>settings.DATABASE
+<div class="highlight highlight-source-python"><pre>settings.<span class="pl-c1">DATABASE</span>
 <span class="pl-s"><span class="pl-pds">'</span>DYNADB<span class="pl-pds">'</span></span>
 
 <span class="pl-k">with</span> settings.using_namespace(<span class="pl-s"><span class="pl-pds">'</span>PROJ1<span class="pl-pds">'</span></span>):
-    settings.DATABASE
+    settings.<span class="pl-c1">DATABASE</span>
     <span class="pl-s"><span class="pl-pds">'</span>PROJ1DB<span class="pl-pds">'</span></span>
 
 <span class="pl-k">with</span> settings.using_namespace(<span class="pl-s"><span class="pl-pds">'</span>PROJ2<span class="pl-pds">'</span></span>):
-    settings.DATABASE
+    settings.<span class="pl-c1">DATABASE</span>
     <span class="pl-s"><span class="pl-pds">'</span>PROJ2DB<span class="pl-pds">'</span></span>
 
-settings.DATABASE
+settings.<span class="pl-c1">DATABASE</span>
 <span class="pl-s"><span class="pl-pds">'</span>DYNADB<span class="pl-pds">'</span></span></pre></div>
 
 <blockquote>
@@ -151,7 +147,7 @@ settings.DATABASE
 </blockquote>
 
 <h1>
-<a id="casting-values-from-envvars" class="anchor" href="#casting-values-from-envvars" aria-hidden="true"><span class="octicon octicon-link"></span></a>casting values from envvars</h1>
+<a id="casting-values-from-envvars" class="anchor" href="#casting-values-from-envvars" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>casting values from envvars</h1>
 
 <p>Sometimes you need to set some values as specific types, boolean, integer, float or lists and dicts.</p>
 
@@ -177,7 +173,7 @@ settings.DATABASE
 <p>You have 2 ways to use the casts.</p>
 
 <h3>
-<a id="casting-on-declaration" class="anchor" href="#casting-on-declaration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Casting on declaration</h3>
+<a id="casting-on-declaration" class="anchor" href="#casting-on-declaration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Casting on declaration</h3>
 
 <p>Just start your ENV settigs with this</p>
 
@@ -191,7 +187,7 @@ settings.DATABASE
 <p>Starting the settings values with @ will make dynaconf.settings to cast it in the time od load.</p>
 
 <h3>
-<a id="casting-on-access" class="anchor" href="#casting-on-access" aria-hidden="true"><span class="octicon octicon-link"></span></a>Casting on access</h3>
+<a id="casting-on-access" class="anchor" href="#casting-on-access" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Casting on access</h3>
 
 <div class="highlight highlight-source-shell"><pre><span class="pl-k">export</span> DYNACONF_USE_SSH=<span class="pl-s"><span class="pl-pds">'</span>yes<span class="pl-pds">'</span></span>
 
@@ -199,18 +195,18 @@ from dynaconf import settings
 </pre></div>
 
 <div class="highlight highlight-source-python"><pre>
-use_ssh <span class="pl-k">=</span> settings.get(<span class="pl-s"><span class="pl-pds">'</span>USE_SSH<span class="pl-pds">'</span></span>, <span class="pl-smi">cast</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>@bool<span class="pl-pds">'</span></span>)
+use_ssh <span class="pl-k">=</span> settings.get(<span class="pl-s"><span class="pl-pds">'</span>USE_SSH<span class="pl-pds">'</span></span>, <span class="pl-v">cast</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>@bool<span class="pl-pds">'</span></span>)
 <span class="pl-c"># or</span>
-use_ssh <span class="pl-k">=</span> settings(<span class="pl-s"><span class="pl-pds">'</span>USE_SSH<span class="pl-pds">'</span></span>, <span class="pl-smi">cast</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>@bool<span class="pl-pds">'</span></span>)
+use_ssh <span class="pl-k">=</span> settings(<span class="pl-s"><span class="pl-pds">'</span>USE_SSH<span class="pl-pds">'</span></span>, <span class="pl-v">cast</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>@bool<span class="pl-pds">'</span></span>)
 <span class="pl-c"># or</span>
 use_ssh <span class="pl-k">=</span> settings.as_bool(<span class="pl-s"><span class="pl-pds">'</span>USE_SSH<span class="pl-pds">'</span></span>)
 
-<span class="pl-k">print</span> use_ssh
+<span class="pl-c1">print</span> use_ssh
 
 <span class="pl-c1">True</span></pre></div>
 
 <h3>
-<a id="more-examples" class="anchor" href="#more-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>more examples</h3>
+<a id="more-examples" class="anchor" href="#more-examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>more examples</h3>
 
 <div class="highlight highlight-source-shell"><pre><span class="pl-k">export</span> DYNACONF_USE_SSH=<span class="pl-s"><span class="pl-pds">'</span>enabled<span class="pl-pds">'</span></span>
 
@@ -229,7 +225,7 @@ settings(<span class="pl-s"><span class="pl-pds">'</span>USE_SSH<span class="pl-
 <span class="pl-s"><span class="pl-pds">'</span>enabled<span class="pl-pds">'</span></span>
 
 <span class="pl-c"># cast as bool</span>
-settings(<span class="pl-s"><span class="pl-pds">'</span>USE_SSH<span class="pl-pds">'</span></span>, <span class="pl-smi">cast</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>@bool<span class="pl-pds">'</span></span>)
+settings(<span class="pl-s"><span class="pl-pds">'</span>USE_SSH<span class="pl-pds">'</span></span>, <span class="pl-v">cast</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>@bool<span class="pl-pds">'</span></span>)
 <span class="pl-c1">True</span>
 
 <span class="pl-c"># also cast as bool</span>
@@ -237,44 +233,44 @@ settings.as_bool(<span class="pl-s"><span class="pl-pds">'</span>USE_SSH<span cl
 <span class="pl-c1">True</span>
 
 <span class="pl-c"># cast defined in declaration '@bool on'</span>
-settings.ABOOL
+settings.<span class="pl-c1">ABOOL</span>
 <span class="pl-c1">True</span>
 
 <span class="pl-c"># cast defined in declaration '@json {"name": "Bruno"}'</span>
-settings.ADICT
+settings.<span class="pl-c1">ADICT</span>
 {<span class="pl-s"><span class="pl-k">u</span><span class="pl-pds">'</span>name<span class="pl-pds">'</span></span>: <span class="pl-s"><span class="pl-k">u</span><span class="pl-pds">'</span>Bruno<span class="pl-pds">'</span></span>}
 
 <span class="pl-c"># cast defined in declaration '@json [1,2,3]'</span>
-settings.ALIST
+settings.<span class="pl-c1">ALIST</span>
 [<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>]
 
 <span class="pl-c"># cast defined in decalration '@float 42.5'</span>
-settings.AFLOAT
+settings.<span class="pl-c1">AFLOAT</span>
 <span class="pl-c1">42.5</span>
 
 <span class="pl-c"># cast defined in declaration '@int 42'</span>
-settings.AINT
+settings.<span class="pl-c1">AINT</span>
 <span class="pl-c1">42</span>
 </pre></div>
 
 <h1>
-<a id="defining-default-namespace" class="anchor" href="#defining-default-namespace" aria-hidden="true"><span class="octicon octicon-link"></span></a>Defining default namespace</h1>
+<a id="defining-default-namespace" class="anchor" href="#defining-default-namespace" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Defining default namespace</h1>
 
 <p>Include in the file defined in DYNACONF_SETTINGS the desired namespace</p>
 
-<div class="highlight highlight-source-python"><pre>DYNACONF_NAMESPACE <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>DYNACONF<span class="pl-pds">'</span></span></pre></div>
+<div class="highlight highlight-source-python"><pre><span class="pl-c1">DYNACONF_NAMESPACE</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>DYNACONF<span class="pl-pds">'</span></span></pre></div>
 
 <h1>
-<a id="storing-settings-in-databases" class="anchor" href="#storing-settings-in-databases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Storing settings in databases</h1>
+<a id="storing-settings-in-databases" class="anchor" href="#storing-settings-in-databases" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Storing settings in databases</h1>
 
 <h2>
-<a id="using-redis" class="anchor" href="#using-redis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using REDIS</h2>
+<a id="using-redis" class="anchor" href="#using-redis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using REDIS</h2>
 
 <p>Redis support relies on the following two settings that you can setup in the DYNACONF_SETTINGS file</p>
 
 <p>1  Add the configuration for redis client</p>
 
-<div class="highlight highlight-source-python"><pre>REDIS_FOR_DYNACONF <span class="pl-k">=</span> {
+<div class="highlight highlight-source-python"><pre><span class="pl-c1">REDIS_FOR_DYNACONF</span> <span class="pl-k">=</span> {
     <span class="pl-s"><span class="pl-pds">'</span>host<span class="pl-pds">'</span></span>: <span class="pl-s"><span class="pl-pds">'</span>localhost<span class="pl-pds">'</span></span>,
     <span class="pl-s"><span class="pl-pds">'</span>port<span class="pl-pds">'</span></span>: <span class="pl-c1">6379</span>,
     <span class="pl-s"><span class="pl-pds">'</span>db<span class="pl-pds">'</span></span>: <span class="pl-c1">0</span>
@@ -289,7 +285,7 @@ settings.AINT
 
 <div class="highlight highlight-source-python"><pre>
 <span class="pl-c"># Loaders to read namespace based vars from diferent data stores</span>
-LOADERS_FOR_DYNACONF <span class="pl-k">=</span> [
+<span class="pl-c1">LOADERS_FOR_DYNACONF</span> <span class="pl-k">=</span> [
     <span class="pl-s"><span class="pl-pds">'</span>dynaconf.loaders.env_loader<span class="pl-pds">'</span></span>,
     <span class="pl-s"><span class="pl-pds">'</span>dynaconf.loaders.redis_loader<span class="pl-pds">'</span></span>
 ]</pre></div>
@@ -303,7 +299,7 @@ LOADERS_FOR_DYNACONF <span class="pl-k">=</span> [
 <div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> dynaconf.utils <span class="pl-k">import</span> redis_writer
 <span class="pl-k">from</span> dynaconf <span class="pl-k">import</span> settings
 
-redis_writer.write(settings, <span class="pl-smi">name</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>Bruno<span class="pl-pds">'</span></span>, <span class="pl-smi">database</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>localhost<span class="pl-pds">'</span></span>, <span class="pl-smi">PORT</span><span class="pl-k">=</span><span class="pl-c1">1234</span>)
+redis_writer.write(settings, <span class="pl-v">name</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>Bruno<span class="pl-pds">'</span></span>, <span class="pl-v">database</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>localhost<span class="pl-pds">'</span></span>, <span class="pl-v">PORT</span><span class="pl-k">=</span><span class="pl-c1">1234</span>)
 </pre></div>
 
 <p>The above data will be converted to namespaced values and recorded in redis as a hash:</p>
@@ -324,15 +320,15 @@ redis_writer.write(settings, <span class="pl-smi">name</span><span class="pl-k">
 
 <div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> dynaconf <span class="pl-k">import</span> settings
 
-<span class="pl-k">print</span> settings.FOO  <span class="pl-c"># this data was loaded once on import</span>
+<span class="pl-c1">print</span> settings.<span class="pl-c1">FOO</span>  <span class="pl-c"># this data was loaded once on import</span>
 
 <span class="pl-k">with</span> settings.fresh():
-    <span class="pl-k">print</span> settings.FOO  <span class="pl-c"># this data is being directly read from loaders</span>
+    <span class="pl-c1">print</span> settings.<span class="pl-c1">FOO</span>  <span class="pl-c"># this data is being directly read from loaders</span>
 </pre></div>
 
 <p>And you can also force some variables to be <strong>fresh</strong> setting in your setting file</p>
 
-<div class="highlight highlight-source-python"><pre>DYNACONF_ALWAYS_FRESH_VARS <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>MYSQL_HOST<span class="pl-pds">'</span></span>]</pre></div>
+<div class="highlight highlight-source-python"><pre><span class="pl-c1">DYNACONF_ALWAYS_FRESH_VARS</span> <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>MYSQL_HOST<span class="pl-pds">'</span></span>]</pre></div>
 
 <p>or using env vars</p>
 
@@ -342,13 +338,13 @@ redis_writer.write(settings, <span class="pl-smi">name</span><span class="pl-k">
 
 <div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> dynaconf <span class="pl-k">import</span> settings
 
-<span class="pl-k">print</span> settings.FOO  <span class="pl-c"># This data was loaded once on import</span>
+<span class="pl-c1">print</span> settings.<span class="pl-c1">FOO</span>  <span class="pl-c"># This data was loaded once on import</span>
 
-<span class="pl-k">print</span> settings.MYSQL_HOST <span class="pl-c"># This data is being read from redis imediatelly!</span>
+<span class="pl-c1">print</span> settings.<span class="pl-c1">MYSQL_HOST</span> <span class="pl-c"># This data is being read from redis imediatelly!</span>
 </pre></div>
 
 <h1>
-<a id="using-programatically" class="anchor" href="#using-programatically" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using programatically</h1>
+<a id="using-programatically" class="anchor" href="#using-programatically" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using programatically</h1>
 
 <p>Sometimes you want to override settings for your existing Package or Framework
 lets say you have a <strong>conf</strong> module exposing a <strong>settings</strong> object and used to do:</p>
@@ -361,8 +357,8 @@ lets say you have a <strong>conf</strong> module exposing a <strong>settings</st
 <span class="pl-k">from</span> dynaconf <span class="pl-k">import</span> LazySettings
 
 settings <span class="pl-k">=</span> LazySettings(
-    <span class="pl-smi">ENVVAR_FOR_DYNACONF</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>MYPROGRAM_SETTINGS_MODULE<span class="pl-pds">"</span></span>,
-    <span class="pl-smi">DYNACONF_NAMESPACE</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>MYPROGRAM<span class="pl-pds">'</span></span>
+    <span class="pl-v">ENVVAR_FOR_DYNACONF</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>MYPROGRAM_SETTINGS_MODULE<span class="pl-pds">"</span></span>,
+    <span class="pl-v">DYNACONF_NAMESPACE</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>MYPROGRAM<span class="pl-pds">'</span></span>
 )
 </pre></div>
 
@@ -371,24 +367,14 @@ settings <span class="pl-k">=</span> LazySettings(
 <blockquote>
 <p>This was inspired by flask.config and django.conf.settings</p>
 </blockquote>
-        </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/rochacbruno/dynaconf/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/rochacbruno/dynaconf/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/rochacbruno/dynaconf">Dynaconf</a> is maintained by <a href="https://github.com/rochacbruno">rochacbruno</a>.</span>
 
-          <p class="repo-owner"><a href="https://github.com/rochacbruno/dynaconf"></a> is maintained by <a href="https://github.com/rochacbruno">rochacbruno</a>.</p>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
 
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
+    </section>
 
   
   </body>
